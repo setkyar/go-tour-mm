@@ -1,3 +1,4 @@
+//go:build OMIT
 // +build OMIT
 
 package main
@@ -8,7 +9,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Welcome to the playground!")
+	fmt.Println("ကစားကွင်းမှ ကြိုဆိုပါတယ်။")
 
-	fmt.Println("The time is", time.Now())
+	fmt.Println("အချိန်က", time.Now())
 }
