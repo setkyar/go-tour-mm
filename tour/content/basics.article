@@ -1,18 +1,19 @@
-Packages, variables, နှင့် functions။
+ပက်ကေ့ဂျ်များ, ကိန်းရှင်များ, နှင့် ဖန်ရှင်များ။
+
 Go ပရိုဂရမ်တိုင်း၏ အခြေခံအစိတ်အပိုင်းများကို လေ့လာပါ။
 
 The Go Authors
 https://golang.org
 
-* Packages
+* ပက်ကေ့ဂျ်များ
 
-Every Go program is made up of packages.
+Go ပရိုဂရမ်တိုင်းသည် ပက်ကေ့ဂျ်များဖြင့် ဖွဲ့စည်းထားသည်။
 
-Programs start running in package `main`.
+ပရိုဂရမ်များသည် `main` ပက်ကေ့ဂျ်မှ စတင်အလုပ်လုပ်သည်။
 
-This program is using the packages with import paths `"fmt"` and `"math/rand"`.
+ဒီပရိုဂရမ်သည် `"fmt"` နှင့် `"math/rand"` အင်ပေါ့လမ်းကြောင်းများ(import paths) ရှိ ပက်ကေ့ဂျ်များကို အသုံးပြုနေသည်။
 
-By convention, the package name is the same as the last element of the import path. For instance, the `"math/rand"` package comprises files that begin with the statement `package`rand`.
+သဘောတူထားသည့်အတိုင်း၊ ပက်ကေ့ဂျ်အမည်သည် import paths ၏ နောက်ဆုံးအစိတ်အပိုင်းနှင့် တူညီသည်။ ဥပမာအားဖြင့်၊ `"math/rand"` ပက်ကေ့ဂျ်သည် `package`rand` ကြေညာချက်ဖြင့် စတင်သော ဖိုင်များပါဝင်သည်။
 
 #appengine: *Note:* The environment in which these programs are executed is
 #appengine: deterministic, so each time you run the example program
@@ -23,109 +24,110 @@ By convention, the package name is the same as the last element of the import pa
 
 .play basics/packages.go
 
-* Imports
+* အင်ပေါ့များ (imports)
 
-This code groups the imports into a parenthesized, "factored" import statement.
+ဒီကုဒ်သည် အင်ပေါ့များကို ကွင်းစကွင်းပိတ်ဖြင့် အုပ်စုဖွဲ့ထားသော "factored" အင်ပေါ့ကြေညာချက်အဖြစ် စုစည်းထားသည်။
 
-You can also write multiple import statements, like:
+သင်သည် အင်ပေါ့ကြေညာချက်များကို သီးခြားစီလည်း ရေးနိုင်သည်၊ ဥပမာ -
 
 	import "fmt"
 	import "math"
 
-But it is good style to use the factored import statement.
+သို့သော် factored အင်ပေါ့ကြေညာချက်ကို အသုံးပြုခြင်းသည် ကောင်းမွန်သော ရေးထုံးဖြစ်သည်။
 
 .play basics/imports.go
 
-* Exported names
+* တင်ပို့ထားသော အမည်များ (Exported names)
 
-In Go, a name is exported if it begins with a capital letter.
-For example, `Pizza` is an exported name, as is `Pi`, which is exported from
-the `math` package.
+Go တွင်၊ အမည်တစ်ခုသည် စာလုံးအကြီးဖြင့် စတင်ပါက တင်ပို့ထားသောအမည်ဖြစ်သည်။
+ဥပမာအားဖြင့်၊ `Pizza` သည် တင်ပို့ထားသောအမည်ဖြစ်သည်၊ `math` ပက်ကေ့ဂျ်မှ တင်ပို့ထားသော `Pi` လည်း ထိုနည်းတူဖြစ်သည်။
 
-`pizza` and `pi` do not start with a capital letter, so they are not exported.
+`pizza` နှင့် `pi` တို့သည် စာလုံးအကြီးဖြင့် မစတင်သောကြောင့် ၎င်းတို့ကို တင်ပို့မထားပါ။
 
-When importing a package, you can refer only to its exported names.
-Any "unexported" names are not accessible from outside the package.
+ပက်ကေ့ဂျ်တစ်ခုကို အင်ပေါ့လုပ်သောအခါ၊ သင်သည် ၎င်း၏ တင်ပို့ထားသောအမည်များကိုသာ ရည်ညွှန်းနိုင်သည်။
+"တင်ပို့မထားသော" မည်သည့်အမည်ကိုမဆို ပက်ကေ့ဂျ်ပြင်ပမှ အသုံးပြု၍မရပါ။ ဆိုလိုတာက Exported လုပ်မထားရင် တခြားပက်ကေ့ဂျ်တွေကသုံးလို့မရဘူး။
 
-Run the code. Notice the error message.
+ကုဒ်ကို run ပါ။ မက်ဆေ့ချ်က အမှားပြ နေတာကိုသတိပြုပါ။
 
-To fix the error, rename `math.pi` to `math.Pi` and try it again.
+အမှားကို ပြင်ဆင်ရန်၊ `math.pi` ကို `math.Pi` သို့ ပြောင်းပြီး ထပ်မံကြိုးစားကြည့်ပါ။
 
 .play basics/exported-names.go
 
-* Functions
+* ဖန်ရှင်များ (Functions)
 
-A function can take zero or more arguments.
+ဖန်ရှင်တစ်ခုသည် အားဂျူးမန့် (argument) များကို လုံးဝမယူခြင်း သို့မဟုတ် အားဂျူးမန့်(arguments)အများအပြားယူခြင်း ပြုလုပ်နိုင်သည်။
 
-In this example, `add` takes two parameters of type `int`.
+ဤဥပမာတွင်၊ `add` သည် `int` အမျိုးအစား ပါရာမီတာ နှစ်ခုကို ယူသည်။
 
-Notice that the type comes _after_ the variable name.
+အမျိုးအစားသည် variable အမည်၏ _နောက်တွင်_ ရှိကြောင်း သတိပြုပါ။
 
-(For more about why types look the way they do, see the [[https://blog.golang.org/gos-declaration-syntax][article on Go's declaration syntax]].)
+(အမျိုးအစားများ အဘယ်ကြောင့် ယခုကဲ့သို့ ပုံသဏ္ဍာန်ရှိသည်ကို ပိုမိုသိရှိလိုပါက [[https://blog.golang.org/gos-declaration-syntax][Go ၏ ကြေညာချက် ဆင်တက်စ်အကြောင်း ဆောင်းပါး]]ကို ကြည့်ပါ။)
 
 .play basics/functions.go
 
-* Functions continued
+* ဖန်ရှင်များ (ဆက်လက်)
 
-When two or more consecutive named function parameters share a type, you can omit the type from all but the last.
+တစ်ခုနှင့်တစ်ခု ဆက်တိုက်ရှိသော အမည်ပါ ဖန်ရှင်ပါရာမီတာ နှစ်ခု သို့မဟုတ် ထို့ထက်ပိုသော ပါရာမီတာများသည် အမျိုးအစားတူညီပါက၊ နောက်ဆုံးတစ်ခုမှလွဲ၍ ကျန်အားလုံး၏ အမျိုးအစားကို ချန်လှပ်ထားနိုင်သည်
 
-In this example, we shortened
+ဤဥပမာတွင်၊ ကျွန်ုပ်တို့သည်
 
 	x int, y int
 
-to
+ကို
 
 	x, y int
 
+အဖြစ် တိုတောင်းစေခဲ့သည်
+
 .play basics/functions-continued.go
 
-* Multiple results
+* ရလဒ်အများအပြား
 
-A function can return any number of results.
+ဖန်ရှင်တစ်ခုသည် မည်သည့်အရေအတွက်မဆို ရလဒ်များကို ပြန်ပေးနိုင်သည်။
 
-The `swap` function returns two strings.
+`swap` ဖန်ရှင်သည် စာကြောင်းနှစ်ကြောင်းကို ပြန်ပေးသည်။
 
 .play basics/multiple-results.go
 
-* Named return values
+* အမည်ပေးထားသော ပြန်ပေးတန်ဖိုးများ (return values)
 
-Go's return values may be named. If so, they are treated as variables defined at the top of the function.
+Go ၏ ပြန်ပေးတန်ဖိုးများကို အမည်ပေးနိုင်သည်။ ထိုသို့ဆိုပါက၊ ၎င်းတို့ကို ဖန်ရှင်၏ထိပ်ဆုံးတွင် သတ်မှတ်ထားသော variable များအဖြစ် သတ်မှတ်သည်။
 
-These names should be used to document the meaning of the return values.
+ဤအမည်များကို ပြန်ပေးတန်ဖိုးများ၏ အဓိပ္ပါယ်ကို စာရွက်စာတမ်းပြုစုရန် အသုံးပြုသင့်သည်။
 
-A `return` statement without arguments returns the named return values. This is known as a "naked" return.
+အားဂျူးမန့်မပါသော `return` ကြေညာချက်သည် အမည်ပေးထားသော ပြန်ပေးတန်ဖိုးများကို ပြန်ပေးသည်။ ဤသည်ကို "naked" return ဟု သိကြသည်။
 
-Naked return statements should be used only in short functions, as with the example shown here. They can harm readability in longer functions.
+Naked return ကြေညာချက်များကို ဤနေရာတွင် ပြထားသောဥပမာကဲ့သို့ တိုတောင်းသော ဖန်ရှင်များတွင်သာ အသုံးပြုသင့်သည်။ ၎င်းတို့သည် ပိုရှည်သော ဖန်ရှင်များတွင် ဖတ်ရှုနိုင်စွမ်းကို ထိခိုက်စေနိုင်သည်။
 
 .play basics/named-results.go
 
-* Variables
+* ကိန်းရှင်များ (Variables)
 
-The `var` statement declares a list of variables; as in function argument lists, the type is last.
+`var` ကြေညာချက်သည် ကိန်းရှင်များစာရင်းကို ကြေညာသည်။ ဖန်ရှင်အားဂျူးမန့်စာရင်းများကဲ့သို့ပင်၊ အမျိုးအစားသည် နောက်ဆုံးတွင်ရှိသည်။
 
-A `var` statement can be at package or function level. We see both in this example.
+`var` ကြေညာချက်သည် ပက်ကေ့ဂျ် သို့မဟုတ် ဖန်ရှင်အဆင့်တွင် ရှိနိုင်သည်။ ကျွန်ုပ်တို့သည် ဤဥပမာတွင် နှစ်မျိုးလုံးကို မြင်တွေ့ရသည်။
 
 .play basics/variables.go
 
-* Variables with initializers
+* စတင်တန်ဖိုးသတ်မှတ်ချက်များပါသော ကိန်းရှင်များ
 
-A var declaration can include initializers, one per variable.
+var ကြေညာချက်တွင် စတင်တန်ဖိုးသတ်မှတ်ချက်များ ပါဝင်နိုင်သည်၊ ကိန်းရှင်တစ်ခုလျှင် တစ်ခုစီ။
 
-If an initializer is present, the type can be omitted; the variable will take the type of the initializer.
+စတင်တန်ဖိုးသတ်မှတ်ချက် ရှိပါက အမျိုးအစားကို ချန်လှပ်ထားနိုင်သည်။ ကိန်းရှင်သည် စတင်တန်ဖိုးသတ်မှတ်ချက်၏ အမျိုးအစားကို ယူမည်ဖြစ်သည်။
 
 .play basics/variables-with-initializers.go
 
-* Short variable declarations
+* တိုတောင်းသော ကိန်းရှင်ကြေညာချက်များ
 
-Inside a function, the `:=` short assignment statement can be used in place of a `var` declaration with implicit type.
+ဖန်ရှင်တစ်ခုအတွင်း၊ `:=` တိုတောင်းသော သတ်မှတ်ချက်ကြေညာချက်ကို ထင်ရှားသော အမျိုးအစားပါသော `var` ကြေညာချက်အစား အသုံးပြုနိုင်သည်။
 
-Outside a function, every statement begins with a keyword (`var`, `func`, and so on) and so the `:=` construct is not available.
+ဖန်ရှင်ပြင်ပတွင်၊ ကြေညာချက်တိုင်းသည် ကီးဝေါ့ (`var`၊ `func` စသည်ဖြင့်) ဖြင့် စတင်သောကြောင့် `:=` ဖွဲ့စည်းပုံကို အသုံးပြု၍မရပါ။
 
 .play basics/short-variable-declarations.go
 
-* Basic types
+* အခြေခံအမျိုးအစားများ
 
-Go's basic types are
+Go ၏ အခြေခံအမျိုးအစားများမှာ -
 
 	bool
 
@@ -134,102 +136,100 @@ Go's basic types are
 	int  int8  int16  int32  int64
 	uint uint8 uint16 uint32 uint64 uintptr
 
-	byte // alias for uint8
+	byte // uint8 အတွက် အမည်ပြောင်း
 
-	rune // alias for int32
-	     // represents a Unicode code point
+	rune // int32 အတွက် အမည်ပြောင်း
+	     // Unicode ကုဒ်အမှတ်တစ်ခုကို ကိုယ်စားပြုသည်
 
 	float32 float64
 
 	complex64 complex128
 
-The example shows variables of several types,
-and also that variable declarations may be "factored" into blocks,
-as with import statements.
+ဒီဥပမာမှာ အမျိုးအစားအမျိုးမျိုးရဲ့ ကိန်းရှင်တွေကို ပြထားပါတယ်။
+ထို့အပြင် ကိန်းရှင်ကြေညာချက်တွေကို အင်ပေါ့ကြေညာချက်တွေလိုပဲ "factored" လုပ်ပြီး ဘလော့တွေအဖြစ် စုစည်းနိုင်ကြောင်းလည်း ပြထားပါတယ်။
 
-The `int`, `uint`, and `uintptr` types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems.
-When you need an integer value you should use `int` unless you have a specific reason to use a sized or unsigned integer type.
+`int`၊ `uint` နဲ့ `uintptr` အမျိုးအစားတွေဟာ 32-ဘစ် စနစ်တွေမှာ 32 ဘစ် အကျယ်ရှိပြီး၊ 64-ဘစ် စနစ်တွေမှာ 64 ဘစ် အကျယ်ရှိပါတယ်။
+ကိန်းပြည့်တန်ဖိုးတစ်ခု လိုအပ်တဲ့အခါ သီးခြားအကြောင်းပြချက်မရှိရင် `int` ကိုသုံးသင့်ပါတယ်။ အရွယ်အစားသတ်မှတ်ထားတဲ့ သို့မဟုတ် အနုတ်လက္ခဏာမပါတဲ့ ကိန်းပြည့်အမျိုးအစားကို မသုံးသင့်ပါဘူး။
 
 .play basics/basic-types.go
 
-* Zero values
+* သုညတန်ဖိုးများ
 
-Variables declared without an explicit initial value are given their
-_zero_value_.
+တိကျတဲ့ ကနဦးတန်ဖိုးမပါဘဲ ကြေညာထားတဲ့ ကိန်းရှင်တွေကို သူတို့ရဲ့
+_သုည_ တန်ဖိုး ပေးထားပါတယ်။
 
-The zero value is:
+သုညတန်ဖိုးတွေက:
 
-- `0` for numeric types,
-- `false` for the boolean type, and
-- `""` (the empty string) for strings.
+- ကိန်းဂဏန်းအမျိုးအစားတွေအတွက် `0`၊
+- ဘူးလီးယန်းအမျိုးအစားအတွက် `false`၊ နဲ့
+- စာကြောင်းတွေအတွက် `""` (ဗလာစာကြောင်း) တို့ဖြစ်ပါတယ်။
 
 .play basics/zero.go
 
-* Type conversions
+* အမျိုးအစားပြောင်းလဲခြင်းများ
 
-The expression `T(v)` converts the value `v` to the type `T`.
+`T(v)` ဖော်ပြချက်က တန်ဖိုး `v` ကို အမျိုးအစား `T` အဖြစ် ပြောင်းလဲပါတယ်။
 
-Some numeric conversions:
+ကိန်းဂဏန်းပြောင်းလဲမှုအချို့:
 
 	var i int = 42
 	var f float64 = float64(i)
 	var u uint = uint(f)
 
-Or, put more simply:
+ဒါမှမဟုတ် ပိုရိုးရှင်းအောင် ရေးရင်:
 
 	i := 42
 	f := float64(i)
 	u := uint(f)
 
-Unlike in C, in Go assignment between items of different type requires an
-explicit conversion.
-Try removing the `float64` or `uint` conversions in the example and see what happens.
+C နဲ့မတူဘဲ၊ Go မှာ မတူညီတဲ့အမျိုးအစားတွေကြား သတ်မှတ်မှုပြုလုပ်တဲ့အခါ တိကျတဲ့ပြောင်းလဲမှုတစ်ခု လိုအပ်ပါတယ်။
+ဥပမာထဲက `float64` သို့မဟုတ် `uint` ပြောင်းလဲမှုတွေကို ဖယ်ထုတ်ကြည့်ပြီး ဘာဖြစ်လဲဆိုတာ ကြည့်ပါ။
 
 .play basics/type-conversions.go
 
-* Type inference
+* အမျိုးအစားကောက်ချက်ချခြင်း (Type inference)
 
-When declaring a variable without specifying an explicit type (either by using the `:=` syntax or `var`=` expression syntax), the variable's type is inferred from the value on the right hand side.
+တိကျတဲ့အမျိုးအစားကို မသတ်မှတ်ဘဲ ကိန်းရှင်တစ်ခုကို ကြေညာတဲ့အခါ (`:=` syntax သို့မဟုတ် `var = ` ဖော်ပြချက် syntax ကိုသုံးပြီး)၊ ကိန်းရှင်ရဲ့အမျိုးအစားကို ညာဘက်ခြမ်းက တန်ဖိုးကနေ ကောက်ချက်ချပါတယ်။
 
-When the right hand side of the declaration is typed, the new variable is of that same type:
+ကြေညာချက်ရဲ့ ညာဘက်ခြမ်းမှာ အမျိုးအစားသတ်မှတ်ထားရင်၊ ကိန်းရှင်အသစ်က အဲဒီအမျိုးအစားအတိုင်းဖြစ်ပါတယ်:
 
 	var i int
-	j := i // j is an int
+	j := i // j က int ဖြစ်ပါတယ်
 
-But when the right hand side contains an untyped numeric constant, the new variable may be an `int`, `float64`, or `complex128` depending on the precision of the constant:
+ဒါပေမယ့် ညာဘက်ခြမ်းမှာ အမျိုးအစားမသတ်မှတ်ထားတဲ့ ကိန်းဂဏန်းကိန်းသေပါရင်၊ ကိန်းရှင်အသစ်က ကိန်းသေရဲ့ တိကျမှုပေါ်မူတည်ပြီး `int`၊ `float64`၊ သို့မဟုတ် `complex128` ဖြစ်နိုင်ပါတယ်:
 
 	i := 42           // int
 	f := 3.142        // float64
 	g := 0.867 + 0.5i // complex128
 
-Try changing the initial value of `v` in the example code and observe how its type is affected.
+ဥပမာကုဒ်ထဲက `v` ရဲ့ ကနဦးတန်ဖိုးကို ပြောင်းကြည့်ပြီး သူ့ရဲ့အမျိုးအစား ဘယ်လိုထိခိုက်လဲဆိုတာ လေ့လာကြည့်ပါ။
 
 .play basics/type-inference.go
 
-* Constants
+* ကိန်းသေများ (Constants)
 
-Constants are declared like variables, but with the `const` keyword.
+ကိန်းသေတွေကို ကိန်းရှင်တွေလိုပဲ ကြေညာပါတယ်၊ ဒါပေမယ့် `const` ကီးဝေါ့နဲ့ ကြေညာပါတယ်။
 
-Constants can be character, string, boolean, or numeric values.
+ကိန်းသေတွေဟာ စာလုံး၊ စာကြောင်း၊ ဘူးလီးယန်း၊ သို့မဟုတ် ကိန်းဂဏန်းတန်ဖိုးတွေ ဖြစ်နိုင်ပါတယ်။
 
-Constants cannot be declared using the `:=` syntax.
+ကိန်းသေတွေကို `:=` syntax သုံးပြီး ကြေညာလို့မရပါဘူး။
 
 .play basics/constants.go
 
-* Numeric Constants
+* ကိန်းဂဏန်းကိန်းသေများ
 
-Numeric constants are high-precision _values_.
+ကိန်းဂဏန်းကိန်းသေတွေဟာ တိကျမှုမြင့်မားတဲ့ _တန်ဖိုးတွေ_ ဖြစ်ပါတယ်။
 
-An untyped constant takes the type needed by its context.
+အမျိုးအစားမသတ်မှတ်ထားတဲ့ ကိန်းသေတစ်ခုဟာ သူ့ရဲ့အခြေအနေလိုအပ်တဲ့ အမျိုးအစားကို ယူပါတယ်။
 
-Try printing `needInt(Big)` too.
+`needInt(Big)` ကိုလည်း ပုံနှိပ်ထုတ်ကြည့်ပါ။
 
-(An `int` can store at maximum a 64-bit integer, and sometimes less.)
+(`int` တစ်ခုဟာ အများဆုံး 64-ဘစ် ကိန်းပြည့်တစ်ခုကို သိမ်းဆည်းနိုင်ပြီး၊ တစ်ခါတစ်ရံ အဲဒီထက်နည်းပါတယ်။)
 
 .play basics/numeric-constants.go
 
-* Congratulations!
+* ဂုဏ်ယူပါတယ်
 
-You finished this lesson!
+ဒီသင်ခန်းစာကို သင်ပြီးဆုံးသွားပါပြီ
 
-You can go back to the list of [[/list][modules]] to find what to learn next, or continue with the [[javascript:click('.next-page')][next lesson]].
+သင်ဘာဆက်လေ့လာရမလဲဆိုတာ ရှာဖွေဖို့ [[/list][မော်ဂျူးစာရင်း]]ကို ပြန်သွားနိုင်ပါတယ်၊ ဒါမှမဟုတ် [[javascript:click('.next-page')][နောက်သင်ခန်းစာ]]နဲ့ ဆက်လက်လေ့လာနိုင်ပါတယ်။

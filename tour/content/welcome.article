@@ -5,62 +5,58 @@
 The Go Authors
 https://golang.org
 
-* Hello, 世界
+* မင်္ဂလာပါ၊ 世界
 
-Welcome to a tour of the [[https://golang.org/][Go programming language]].
+[[https://golang.org/][Go ပရိုဂရမ်းမင်း]]ရဲ့ ခရီးစဉ်ကို ကြိုဆိုပါတယ်။
 
-The tour is divided into a list of modules that you can
-access by clicking on
-[[javascript:highlight(".logo")][A Tour of Go]] on the top left of the page.
+ဒီခရီးစဉ်ကို မော်ဂျူးတွေအဖြစ် ခွဲထားပြီး၊ စာမျက်နှာရဲ့ ဘယ်ဘက်ထိပ်မှာရှိတဲ့
+[[javascript:highlight(".logo")][A Tour of Go]] ကို နှိပ်ပြီး ဝင်ရောက်ကြည့်ရှုနိုင်ပါတယ်။
 
-You can also view the table of contents at any time by clicking on the [[javascript:highlightAndClick(".nav")][menu]] on the top right of the page.
+စာမျက်နှာရဲ့ ညာဘက်ထိပ်မှာရှိတဲ့ [[javascript:highlightAndClick(".nav")][menu]]ကို နှိပ်ပြီးတော့လည်း မာတိကာကို အချိန်မရွေး ကြည့်နိုင်ပါတယ်။
 
-Throughout the tour you will find a series of slides and exercises for you
-to complete.
+ခရီးစဉ်တလျှောက်မှာ သင်ပြီးမြောက်စေချင်တဲ့ စာမျက်နှာ slides တွေနဲ့ လေ့ကျင့်ခန်းတွေကို တွေ့ရပါလိမ့်မယ်။
 
-You can navigate through them using
+အောက်ပါနည်းလမ်းတွေသုံးပြီး ရှေ့နောက်သွားလာနိုင်ပါတယ်
 
-- [[javascript:highlight(".prev-page")]["previous"]] or `PageUp` to go to the previous page,
+- [[javascript:highlight(".prev-page")]["previous"]] သို့မဟုတ် `PageUp` ကီးကို နှိပ်ပြီး ယခင်စာမျက်နှာကို သွားနိုင်ပါတယ်၊
 
-- [[javascript:highlight(".next-page")]["next"]] or `PageDown` to go to the next page.
+- [[javascript:highlight(".next-page")]["next"]] သို့မဟုတ် `PageDown` ကီးကို နှိပ်ပြီး နောက်စာမျက်နှာကို သွားနိုင်ပါတယ်။
 
-The tour is interactive. Click the
-[[javascript:highlightAndClick("#run")][Run]] button now
-(or press `Shift` + `Enter`) to compile and run the program on
-#appengine: a remote server.
-your computer.
-The result is displayed below the code.
+ဒီခရီးစဉ်က အပြန်အလှန်တုံ့ပြန်မှု(interactive) ရှိပါတယ်။ 
+[[javascript:highlightAndClick("#run")][Run]] ခလုတ်ကို အခုနှိပ်ကြည့်ပါ
+(သို့မဟုတ် `Shift` + `Enter` ကို နှိပ်ပါ)။ ဒါဆိုရင် ပရိုဂရမ်ကို ကွန်ပိုင်းလုပ်ပြီး သင့်ကွန်ပျူတာပေါ်မှာ run ပါလိမ့်မယ်။
+ရလဒ်ကို ကုဒ်အောက်မှာ ပြပေးပါလိမ့်မယ်
 
-These example programs demonstrate different aspects of Go. The programs in the tour are meant to be starting points for your own experimentation.
+ဒီဥပမာပရိုဂရမ်တွေက Go ရဲ့ ရှုထောင့်အမျိုးမျိုးကို  ဖော်ပြထားပါတယ်။ ခရီးစဉ်ထဲက ပရိုဂရမ်တွေဟာ သင့်ရဲ့ ကိုယ်ပိုင်စမ်းသပ်မှုတွေအတွက် စတင်ရာနေရာတွေ ဖြစ်ပါတယ်။
 
-Edit the program and run it again.
+ပရိုဂရမ်ကို ပြင်ဆင်ပြီး ထပ် run ကြည့်ပါ။
 
-When you click on [[javascript:highlightAndClick("#format")][Format]]
-(shortcut: `Ctrl` + `Enter`), the text in the editor is formatted using the
-[[https://golang.org/cmd/gofmt/][gofmt]] tool. You can switch syntax highlighting on and off
-by clicking on the [[javascript:highlightAndClick(".syntax-checkbox")][syntax]] button.
+[[javascript:highlightAndClick("#format")][Format]] ကို နှိပ်လိုက်ရင် 
+(shortcut: `Ctrl` + `Enter`)၊ editor ထဲက စာသားတွေကို
+[[https://golang.org/cmd/gofmt/][gofmt]] tool ကိုသုံးပြီး ဖော်မတ်လုပ်ပေးပါလိမ့်မယ်။ 
+[[javascript:highlightAndClick(".syntax-checkbox")][syntax]] ခလုတ်ကို နှိပ်ပြီး syntax highlighting ကို ဖွင့်ပိတ်လုပ်နိုင်ပါတယ်။
 
-When you're ready to move on, click the [[javascript:highlightAndClick(".next-page")][right arrow]] below or type the `PageDown` key.
+ရှေ့ဆက်ဖို့ အဆင်သင့်ဖြစ်ရင် အောက်က [[javascript:highlightAndClick(".next-page")][ညာဘက်မြှား]]ကို နှိပ်ပါ သို့မဟုတ် `PageDown` ကီးကို နှိပ်ပါ။
 
 .play welcome/hello.go
 
 * Go local
 
-The tour is available in other languages:
+ဒီခရီးစဉ်ကို အခြားဘာသာစကားတွေနဲ့လည်း ရနိုင်ပါတယ်:
 
-- [[https://go-tour-br.appspot.com/][Brazilian Portuguese — Português do Brasil]]
-- [[https://go-tour-ca.appspot.com/][Catalan — Català]]
-- [[https://tour.go-zh.org/][Simplified Chinese — 中文（简体）]]
-- [[https://go-tour-cz.appspot.com/][Czech — Česky]]
-- [[https://go-tour-fr.appspot.com/][French — Français]]
-- [[https://go-tour-id2.appspot.com/][Indonesian — Bahasa Indonesia]]
-- [[https://go-tour-jp.appspot.com/][Japanese — 日本語]]
-- [[https://go-tour-ko.appspot.com/][Korean — 한국어]]
-- [[https://go-tour-pl1.appspot.com/][Polish — Polski]]
-- [[https://go-tour-th.appspot.com/][Thai — ภาษาไทย]]
-- [[https://go-tour-uz.appspot.com/][Uzbek — Ўзбекча]]
+- [[https://go-tour-br.appspot.com/][ဘရာဇီး ပေါ်တူဂီ — Português do Brasil]]
+- [[https://go-tour-ca.appspot.com/][ကက်တလန် — Català]]
+- [[https://tour.go-zh.org/][ရိုးရှင်းတဲ့ တရုတ် — 中文（简体）]]
+- [[https://go-tour-cz.appspot.com/][ချက် — Česky]]
+- [[https://go-tour-fr.appspot.com/][ပြင်သစ် — Français]]
+- [[https://go-tour-id2.appspot.com/][အင်ဒိုနီးရှား — Bahasa Indonesia]]
+- [[https://go-tour-jp.appspot.com/][ဂျပန် — 日本語]]
+- [[https://go-tour-ko.appspot.com/][ကိုရီးယား — 한국어]]
+- [[https://go-tour-pl1.appspot.com/][ပိုလန် — Polski]]
+- [[https://go-tour-th.appspot.com/][ထိုင်း — ภาษาไทย]]
+- [[https://go-tour-uz.appspot.com/][ဥဇဘက် — Ўзбекча]]
 
-Click the [[javascript:highlightAndClick(".next-page")]["next"]] button or type `PageDown` to continue.
+ရှေ့ဆက်ဖို့ [[javascript:highlightAndClick(".next-page")]["next"]] ခလုတ်ကို နှိပ်ပါ သို့မဟုတ် `PageDown` ကီးကို နှိပ်ပါ။
 
 #appengine: * Go offline (optional)
 #appengine:
@@ -100,9 +96,9 @@ Click the [[javascript:highlightAndClick(".next-page")]["next"]] button or type 
 #appengine:
 #appengine: .play welcome/sandbox.go
 
-* Congratulations
+* ဂုဏ်ယူပါတယ်
 
-You've finished the first module of the tour!
+ခရီးစဉ်ရဲ့ ပထမဆုံးမော်ဂျူးကို ပြီးဆုံးသွားပါပြီ!
 
-Now click on [[javascript:highlightAndClick(".logo")][A Tour of Go]] to find out what else
-you can learn about Go, or go directly to the [[javascript:click('.next-page')][next lesson]].
+အခု [[javascript:highlightAndClick(".logo")][A Tour of Go]] ကို နှိပ်ပြီး Go အကြောင်း ဘာတွေထပ်လေ့လာနိုင်သေးလဲဆိုတာ ကြည့်ပါ၊ 
+သို့မဟုတ် တန်းပြီး [[javascript:click('.next-page')][next lesson]] ကို သွားပါ။
