@@ -1,5 +1,5 @@
-More types: structs, slices, and maps.
-Learn how to define types based on existing ones: this lesson covers structs, arrays, slices, and maps.
+နောက်ထပ် data types များ: structs, slices, နှင့် maps။
+ရှိပြီးသား types များပေါ်အခြေခံ၍ အသစ် သတ်မှတ်နည်းများကို လေ့လာပါ: ဒီသင်ခန်းစာသည် structs, arrays, slices, နှင့် maps တို့ကို ဖော်ပြထားပါသည်။
 
 The Go Authors
 https://golang.org

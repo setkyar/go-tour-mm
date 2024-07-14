@@ -24,7 +24,7 @@ a.logo, .toc a {
 }
 h1, h2, h3, h4 {
     color: #333;
-    line-height: 32px;
+    line-height: 1.6em;
     margin: 0;
 }
 pre, code {

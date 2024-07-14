@@ -1,5 +1,6 @@
-Flow control statements: for, if, else, switch and defer
-Learn how to control the flow of your code with conditionals, loops, switches and defers.
+Flow control statements များ: for, if, else, switch နှင့် defer
+conditionals, loops, switches နှင့် defers များကို အသုံးပြု၍ သင့် ကုဒ်၏ flow ကို မည်သို့ ထိန်းချုပ်ရမည်ကို လေ့လာပါ။
+
 
 The Go Authors
 https://golang.org

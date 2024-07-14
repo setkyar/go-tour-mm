@@ -12,56 +12,56 @@ angular
       id: "mechanics",
       title: "ခရီးစဥ်ကို အသုံးပြုခြင်း",
       description:
-        '<p><a href="https://golang.org">Go ပရိုဂရမ်းမင်းဘာသာစကား</a>ရဲ့ ခရီးစဉ်ကို ကြိုဆိုပါတယ်။ ဒီခရီးစဉ်မှာ Go ဘာသာစကားရဲ့ အရေးအကြီးဆုံး လုပ်ဆောင်ချက်တွေကို အဓိကထား ဖော်ပြထားပါတယ်။</p>',
+        '<p><a href="https://golang.org">Go ပရိုဂရမ်းမင်း</a> ခရီးစဉ်မှ ကြိုဆိုပါတယ်။ ဒီခရီးစဉ်မှာ Go ရဲ့ အရေးအကြီးဆုံး လုပ်ဆောင်ချက်တွေကို အဓိကထား ဖော်ပြထားပါတယ်။</p>',
       lessons: ["welcome"],
     },
     {
       id: "basics",
-      title: "Basics",
+      title: "အခြေခံများ",
       description:
-        "<p>The starting point, learn all the basics of the language.</p><p>Declaring variables, calling functions, and all the things you need to know before moving to the next lessons.</p>",
+        "<p>စတင်ရမည့်နေရာ၊ Go ပရိုဂရမ်းမင်းရဲ့ အခြေခံအားလုံးကို လေ့လာပါမည်။</p><p>Variables များ ကြေညာခြင်း၊ function များ ခေါ်ယူသုံးစွဲခြင်း နှင့် နောက်သင်ခန်းစာများသို့ မသွားမီ သိထားရမည့် အရာအားလုံးကို လေ့လာရပါမည်။</p>",
       lessons: ["basics", "flowcontrol", "moretypes"],
     },
     {
       id: "methods",
-      title: "Methods and interfaces",
+      title: "Methods နှင့် interfaces",
       description:
-        "<p>Learn how to define methods on types, how to declare interfaces, and how to put everything together.</p>",
+        "<p>Types များပေါ်တွင် methods များကို မည်သို့သတ်မှတ်ရမည်၊ interfaces များကို မည်သို့ကြေညာရမည်၊ နှင့် ၎င်းတို့အားလုံးကို မည်သို့ပေါင်းစပ်ရမည်ကို လေ့လာပါ။</p>",
       lessons: ["methods"],
     },
     {
       id: "concurrency",
       title: "Concurrency",
       description:
-        "<p>Go provides concurrency features as part of the core language.</p><p>This module goes over goroutines and channels, and how they are used to implement different concurrency patterns.</p>",
+        "<p>Go သည် concurrency လုပ်ဆောင်ချက်များကို Go ပရိုဂရမ်းမင်း၏ အဓိက အစိတ်အပိုင်းအဖြစ် ပေးထားပါသည်။</p><p>ဤအပိုင်းတွင် goroutines နှင့် channels အကြောင်း၊ ထို့အပြင် ၎င်းတို့ကို မတူညီသော concurrency ပုံစံများ အကောင်အထည်ဖော်ရန် မည်သို့အသုံးပြုသည်ကို လေ့လာသွားမည် ဖြစ်ပါသည်။</p>",
       lessons: ["concurrency"],
     },
   ])
   // translation
   .value("translation", {
-    off: "off",
-    on: "on",
+    off: "ပိတ်ပါ",
+    on: "ဖွင့်ပါ",
     syntax: "Syntax-Highlighting",
     lineno: "Line-Numbers",
     reset: "Reset Slide",
-    format: "Format Source Code",
-    kill: "Kill Program",
+    format: "ကုဒ်ကို ပုံစံချပါ",
+    kill: "ပရိုဂရမ်ကို ရပ်တန့်ပါ",
     run: "Run",
-    compile: "Compile and Run",
+    compile: "Compile ပီး Run ပါ",
     more: "Options",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    waiting: "Waiting for remote server...",
-    errcomm: "Error communicating with remote server.",
-    "submit-feedback": "Send feedback about this page",
+    toc: "မာတိကာ",
+    prev: "ယခင်",
+    next: "နောက်",
+    waiting: "ဆာဗာကို စောင့်ဆိုင်းနေသည်...",
+    errcomm: "ဆာဗာနှင့် ဆက်သွယ်ရာတွင် အမှားအယွင်း ဖြစ်ပေါ်နေသည်။",
+    "submit-feedback": "ဆာဗာနှင့် ဆက်သွယ်ရာတွင် အမှားအယွင်း ဖြစ်ပေါ်နေသည်",
 
     // GitHub issue template: update repo and messaging when translating.
-    "github-repo": "github.com/golang/tour",
-    "issue-title": "tour: [REPLACE WITH SHORT DESCRIPTION]",
+    "github-repo": "github.com/setkyar/go-tour-mm",
+    "issue-title": "tour: [တိုတောင်းသော ဖော်ပြချက်ဖြင့် အစားထိုးပါ]",
     "issue-message":
-      "Change the title above to describe your issue and add your feedback here, including code if necessary",
-    context: "Context",
+      "အထက်ပါခေါင်းစဉ်ကို သင့်ပြဿနာကို ဖော်ပြရန် ပြောင်းလဲပြီး သင့်အကြံပြုချက်ကို ဤနေရာတွင် ထည့်သွင်းပါ၊ လိုအပ်ပါက ကုဒ်ကိုပါ ထည့်သွင်းနိုင်ပါသည်",
+    context: "အခြေအနေ",
   })
   // Config for codemirror plugin
   .value("ui.config", {
