@@ -15,12 +15,12 @@ Go ပရိုဂရမ်တိုင်းသည် ပက်ကေ့ဂျ�
 
 သဘောတူထားသည့်အတိုင်း၊ ပက်ကေ့ဂျ်အမည်သည် import paths ၏ နောက်ဆုံးအစိတ်အပိုင်းနှင့် တူညီသည်။ ဥပမာအားဖြင့်၊ `"math/rand"` ပက်ကေ့ဂျ်သည် `package`rand` ကြေညာချက်ဖြင့် စတင်သော ဖိုင်များပါဝင်သည်။
 
-#appengine: *Note:* The environment in which these programs are executed is
-#appengine: deterministic, so each time you run the example program
-#appengine: `rand.Intn` will return the same number.
+#appengine: *မှတ်ချက်*: ဒီပရိုဂရမ်တွေကို run တဲ့ပတ်ဝန်းကျင်က တသမတ်တည်းဖြစ်တဲ့အတွက် 
+#appengine: နမူနာပရိုဂရမ်ကို run တိုင်း rand.Intn က တူညီတဲ့နံပါတ်ကိုပဲ ပြန်ပေးပါလိမ့်မယ်။
 #appengine:
-#appengine: (To see a different number, seed the number generator; see [[https://golang.org/pkg/math/rand/#Seed][`rand.Seed`]].
-#appengine: Time is constant in the playground, so you will need to use something else as the seed.)
+#appengine: (ကွဲပြားတဲ့နံပါတ်တစ်ခုကို မြင်ချင်ရင် နံပါတ်ထုတ်ပေးတဲ့စနစ်ကို seed လုပ်ပါ။ 
+#appengine: [[https://golang.org/pkg/math/rand/#Seed][rand.Seed]] ကို ကြည့်ပါ။ 
+#appengine: Playground မှာ အချိန်က ပုံသေဖြစ်နေတဲ့အတွက် seed အဖြစ် တခြားတစ်ခုခုကို သုံးရပါမယ်။)
 
 .play basics/packages.go
 

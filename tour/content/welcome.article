@@ -58,41 +58,40 @@ https://golang.org
 
 ရှေ့ဆက်ဖို့ [[javascript:highlightAndClick(".next-page")]["next"]] ခလုတ်ကို နှိပ်ပါ သို့မဟုတ် `PageDown` ကီးကို နှိပ်ပါ။
 
-#appengine: * Go offline (optional)
+#appengine: * Go ကို အော့ဖ်လိုင်းသုံးခြင်း (လိုအပ်ပါက)
 #appengine:
-#appengine: This tour is also available as a stand-alone program that you can use
-#appengine: without access to the internet. It builds and runs the code samples on
-#appengine: your own machine.
+#appengine: ဒီခရီးစဥ်ကို အင်တာနက်မလိုဘဲ သုံးနိုင်တဲ့ stand-alone ပရိုဂရမ်အနေနဲ့လည်း ရနိုင်ပါတယ်။
+#appengine: ကုဒ်နမူနာတွေကို သင့်ကွန်ပျူတာပေါ်မှာ ဆောက်လုပ်ပြီး run နိုင်ပါတယ်။
 #appengine:
-#appengine: To run the tour locally, you'll need to first
-#appengine: [[https://golang.org/doc/install][install Go]] and then run:
-#appengine:
+#appengine: ဒီခရီးစဥ်ကို local မှာ run ဖို့ ပထမဆုံး [[https://golang.org/doc/install][Go ကို install လုပ်ပါ]] 
+#appengine: ပြီးရင် အောက်ပါ command ကို run ပါ:
+
 #appengine:   go get golang.org/x/tour
 #appengine:
-#appengine: This will place a `tour` binary in your
-#appengine: [[https://golang.org/doc/code.html#Workspaces][workspace]]'s `bin` directory.
-#appengine: When you run the tour program, it will open a web browser displaying
-#appengine: your local version of the tour.
+#appengine: ဒါက သင့်ရဲ့ [[https://golang.org/doc/code.html#Workspaces][workspace]] ထဲက bin ဖိုင်တွဲထဲမှာ 
+#appengine: tour binary ကို ထည့်ပေးပါလိမ့်မယ်။
+#appengine: tour ပရိုဂရမ်ကို run တဲ့အခါ သင့်ရဲ့ local version tour ကို ပြသထားတဲ့ 
+#appengine: web browser ကို ဖွင့်ပေးပါလိမ့်မယ်။
 #appengine:
-#appengine: Of course, you can continue to take the tour through this web site.
+#appengine: ဒါပေါ့ သင် ဒီ website ကနေ ဒီခရီးစဥ်ကို ကို ဆက်လက်လေ့လာချင်တယ်ဆိုလဲလေ့လာနိုင်ပါတယ်။
 
 #appengine: * The Go Playground
 #appengine:
-#appengine: This tour is built atop the [[https://play.golang.org/][Go Playground]], a
-#appengine: web service that runs on [[https://golang.org/][golang.org]]'s servers.
+#appengine: ဒီခရီးစဥ်ကို [[https://play.golang.org/][Go Playground]] ပေါ်မှာ တည်ဆောက်ထားပါတယ်။ 
+#appengine: ၎င်းသည် [[https://golang.org/][golang.org]] ဆာဗာတွေပေါ်မှာ run နေတဲ့ web service တစ်ခုဖြစ်ပါတယ်။
 #appengine:
-#appengine: The service receives a Go program, compiles, links, and runs the program inside
-#appengine: a sandbox, then returns the output.
+#appengine: ဒီ service က Go ပရိုဂရမ်တစ်ခုကို လက်ခံရရှိပြီး၊ compile လုပ်ကာ၊ link လုပ်ပြီး sandbox ထဲမှာ run ပါတယ်။ 
+#appengine: ပြီးရင် output ကို ပြန်ပေးပါတယ်။
 #appengine:
-#appengine: There are limitations to the programs that can be run in the playground:
+#appengine: Playground မှာ run လို့ရတဲ့ ပရိုဂရမ်တွေမှာ ကန့်သတ်ချက်တွေ ရှိပါတယ်:
 #appengine:
-#appengine: - In the playground the time begins at 2009-11-10 23:00:00 UTC (determining the significance of this date is an exercise for the reader). This makes it easier to cache programs by giving them deterministic output.
+#appengine: - Playground မှာ အချိန်က 2009-11-10 23:00:00 UTC ကနေ စတင်ပါတယ် (ဒီရက်စွဲရဲ့ အရေးပါမှုကို ဆုံးဖြတ်ဖို့က စာဖတ်သူအတွက် လေ့ကျင့်ခန်းတစ်ခုပါ)။ ဒါက deterministic output ပေးခြင်းဖြင့် ပရိုဂရမ်တွေကို ပိုလွယ်ကူစွာ cache လုပ်နိုင်စေပါတယ်။
 #appengine:
-#appengine: - There are also limits on execution time and on CPU and memory usage, and the program cannot access external network hosts.
+#appengine: - အချိန်ကန့်သတ်ချက်၊ CPU နဲ့ memory သုံးစွဲမှု ကန့်သတ်ချက်တွေလည်း ရှိပါတယ်။ ပရိုဂရမ်က ပြင်ပ network host တွေကို ချိတ်ဆက်လို့ မရပါဘူး။
 #appengine:
-#appengine: The playground uses the latest stable release of Go.
+#appengine: Playground က Go ရဲ့ နောက်ဆုံးထွက် stable version ကို သုံးပါတယ်။
 #appengine:
-#appengine: Read "[[https://blog.golang.org/playground][Inside the Go Playground]]" to learn more.
+#appengine: ပိုမိုလေ့လာလိုပါက "[[https://blog.golang.org/playground][Inside the Go Playground]]" ကို ဖတ်ပါ။
 #appengine:
 #appengine: .play welcome/sandbox.go
 
